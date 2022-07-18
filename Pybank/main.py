@@ -38,6 +38,9 @@ print(f"Average change: {round(sum(monthly_profit_change)/len(monthly_profit_cha
 print(f"Greatest Increase in profits: {total_months[max_increase_month]} (${(str(max_increase_value))})")
 print(f"Greatest Decrease in profits: {total_months[max_decrease_month]} (${(str(max_decrease_value))})")
 
+output_file = os.path.join("python_challenge", "Pybank", "Financial_analysis_Summary.tx")
+with opem(output_file, "w") as file:
+    textfile.write(financial_results)
 
 
 
