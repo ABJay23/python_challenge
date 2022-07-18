@@ -39,8 +39,27 @@ print(f"Greatest Increase in profits: {total_months[max_increase_month]} (${(str
 print(f"Greatest Decrease in profits: {total_months[max_decrease_month]} (${(str(max_decrease_value))})")
 
 output_file = os.path.join("python_challenge", "Pybank", "Financial_analysis_Summary.tx")
-with opem(output_file, "w") as file:
-    textfile.write(financial_results)
+with open(output_file, "w") as file:
+    file.write("Financial Analyis")
+    file.write("\n")
+    file.write("**********************************")
+    file.write("\n")
+    file.write(f"Total Months: {len(total_months)}")
+    file.write("\n")
+    file.write(f"Total: ${sum(total_profit)}")
+    file.write("\n")
+    file.write(f"Average change: {round(sum(monthly_profit_change)/len(monthly_profit_change), 2)}")
+    file.write("\n")
+    file.write(f"Greatest Increase in profits: {total_months[max_increase_month]} (${(str(max_increase_value))})")
+    file.write("\n")
+    file.write(f"Greatest Decrease in profits: {total_months[max_decrease_month]} (${(str(max_decrease_value))})")
+
+
+
+
+    
+
+
 
 
 
